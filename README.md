@@ -1,16 +1,112 @@
-# React + Vite
+# Task Manager Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and user-friendly frontend application built with React and Vite. This interface connects to the Task Manager API and provides a seamless experience for user authentication and task management. Designed with modern React principles, reusable components, and clean UI architecture.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### User Interface
+- Mobile-friendly and responsive layout
+- Clean and intuitive design
+- Reusable components (Navbar, Forms, Task Items)
 
-## React Compiler
+### Authentication
+- User registration and login pages
+- Secure authentication flow using JWT stored in browser memory
+- Protected routes for logged-in users only
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Task Management
+- Create, view, update, and delete tasks
+- Real-time UI updates
+- User-specific task display
 
-## Expanding the ESLint configuration
+### Architecture & Code Quality
+- Organized file structure using `components/`, `pages/`, and `assets/`
+- React functional components and hooks
+- Centralized styling using CSS modules and global styles
+- API service integration for clean code separation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+**Frontend:** React (Vite), JSX  
+**Styling:** CSS  
+**Build Tool:** Vite  
+**Other:** Fetch API, React Hooks, Environment Variables  
+
+## Project Structure
+
+```
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── assets/
+│   │   └── react.svg
+│   ├── components/
+│   │   └── Navbar.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   └── Tasks.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   └── styles.css
+├── package.json
+└── vite.config.js
+```
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/task-manager-frontend.git
+cd task-manager-frontend
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Create `.env` file
+
+```
+VITE_API_URL=http://localhost:5000/api
+```
+
+Update the value if your backend is deployed.
+
+### 4. Run the development server
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+## Pages Overview
+
+- **Home** – Overview of the app  
+- **Register** – Create a new user  
+- **Login** – Authenticate and access tasks  
+- **Tasks** – Full CRUD task management interface  
+
+## Future Improvements
+
+- Dark mode theme  
+- Global state management (Redux or Zustand)  
+- Toast notifications  
+- Form validation improvements  
+- Deployment with CI/CD pipeline  
+
+## License
+
+MIT License.
