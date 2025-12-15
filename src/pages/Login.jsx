@@ -11,9 +11,18 @@ export default function Login() {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
+
+  const form = {
+    email,
+    password,
+  };
+
   try {
-    const res = await axios.post("http://localhost:5000/api/users/login", form);
-    localStorage.setItem("token", res.data.token); // store JWT
+    const res = await axios.post(
+      "http://localhost:5000/api/users/login",
+      form
+    );
+    localStorage.setItem("token", res.data.token);
     alert("Login successful!");
     navigate("/tasks");
   } catch (err) {
